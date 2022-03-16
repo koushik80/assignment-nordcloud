@@ -2,13 +2,13 @@
 <div align="center"><a href="########">Problem</a></div>
 <h2 align="left">Write a program that solves the most suitable (with highest non-zero speed) network station for a device at a given point (x, y).</h2>
 
-<h3 align="left">This problem can be solved in 2-dimensional space. Network stations have reach and speed that depends on the distance to the station.</h3>
+<h4 align="left">This problem can be solved in 2-dimensional space. Network stations have reach and speed that depends on the distance to the station.</h4>
 
-<h3 align="left">A network station’s speed can be calculated as follows:</h3>
-<h3 align="center" font-weight="bold">speed = (reach - device's distance from network station)^2
-     if distance > reach, speed = 0</h3>
+<h4 align="left">A network station’s speed can be calculated as follows:</h4>
+<h4 align="center" font-weight="bold">speed = (reach - device's distance from network station)^2
+     if distance > reach, speed = 0</h4>
 
-<h3 align="left">Network stations are located at points (x, y) and have reach r:</h3>
+<h4 align="left">Network stations are located at points (x, y) and have reach r:</h4>
 
 
 <table align="center">
@@ -44,20 +44,20 @@
   </tr>
   </table>
 
-<h3 align="left">Print out the most suitable network station and the network speed from devices (x, y):</h3>
+<h4 align="left">Print out the most suitable network station and the network speed from devices (x, y):</h4>
 <p align="center">(0, 0), (100, 100), (15, 10), (18, 18), (13, 13) and (25, 99)</p>
 
-<h3 align="left">Program should output the solution to these two cases:</h3>
+<h4 align="left">Program should output the solution to these two cases:</h4>
 
 <ul>
-<li align="center">Best station found, output station location and speed</li>
-<li align="center">No station within reach found, output error message</li>
+<li align="left">Best station found, output station location and speed</li>
+<li align="left">No station within reach found, output error message</li>
 </ul>
 
-<h3 align="left">It can be in the form of:</h3>
-<p align="center" font-style="italic">“Best network station for point x,y is x,y with speed z”
+<h4 align="left">It can be in the form of:</h4>
+<p align="left" font-style="italic">“Best network station for point x,y is x,y with speed z”
 </p>
-<p align="center" font-style="italic">“No network station within reach for point x,y”</p>
+<p align="left" font-style="italic">“No network station within reach for point x,y”</p>
 
 
 
