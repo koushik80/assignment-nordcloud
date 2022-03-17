@@ -1,0 +1,33 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+h2{
+    text-align: center;
+}
+#table{
+    margin-top: 20px;
+}
+#row{
+
+    display: flex;
+    justify-content: space-evenly;
+}
+#row>div{
+    width: 100%;
+    padding:10px;
+    border: 1px solid #dddddd;
+}
+#row1{
+    background-color: #dddddd;
+    display: flex;
+    justify-content: space-evenly;
+}
+#row1>div{
+    width: 100%;
+    padding:10px;
+    border: 1px solid #dddddd;
+}
