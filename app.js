@@ -28,7 +28,6 @@ const solution = (x, y, odd) => {
       htmlStr += `<div id="row1"> <div> <p>Point</p> </div> <div><p>[${x},${y}]</p></div><div><p>No network station within reach found</p></div><div> </div><div> </div><div> </div></div>`;
 
     }else{
-
       htmlStr += `<div id="row"> <div> <p>Point</p> </div> <div><p>[${x},${y}]</p></div><div><p>No network station within reach found</p></div><div> </div><div> </div><div> </div></div>`;
     }
     console.log("No network station within reach for point", x, ",", y);

@@ -7,12 +7,14 @@ body{
 }
 h2{
     text-align: center;
+    margin-top: 70px;
+    color: #008080;
+    font-size: 60px;
 }
 #table{
     margin-top: 20px;
 }
 #row{
-
     display: flex;
     justify-content: space-evenly;
 }
