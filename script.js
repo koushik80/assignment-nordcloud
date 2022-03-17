@@ -1,43 +1,48 @@
-var x1 = new Array(0, 100, 15, 18, 13, 25);
-var y1 = new Array(0, 100, 10, 18, 13, 99);
-
-var x2 = new Array(0, 20, 10, 5, 99);
-var y2 = new Array(0, 20, 0, 5, 25);
-
-var reach = new Array(9, 6, 12, 13, 2);
-
-for (i = 0; i < x1.length; i++) {
-
-var speed = [];
-
-var distance = [];
-
-var sumcheck = 0;
-
-for (j = 0; j < x2.length; j++) {
-
-distance[j] = Math.sqrt((x1[i]-x2[j]) ** 2 + (y1[i]-y2[j]) ** 2);
-
-if (reach[j] > distance[j]) {
-
-speed[j] = (reach[j]-distance[j]) ** 2;
+const solution = (x, y) => {
+const network_stations = [
+[0, 0, 9],
+[20, 20, 6],
+[10, 0, 12],
+[5, 5, 13],
+[99, 25, 2],
+];
+var solution_coordinates = [];
+var speed = 0;
+for (let point of network_stations) {
+var distance = Math.pow(
+Math.pow(x - point[0], 2) + Math.pow(y - point[1], 2),
+0.5
+);
+if (distance > point[2]) {
+continue;
 }
-else{
-speed[j] = 0;
+var temp_speed = Math.pow(point[2] - distance, 2);
+if (temp_speed > speed) {
+speed = temp_speed;
+solution_coordinates = [point[0], point[1]];
 }
-
-sumcheck += speed[j];
 }
-
-
-if (sumcheck>0){
-
-    m = Math.max.apply(Math,speed);
-    var index = speed.indexOf(m);
-    document.write("Best network station for point (" + x1[i] + "," + y1[i]+ ") is (" + x2[index] + "," + y2[index]+ ") with speed " + speed[index]+" <br/>");
-    }
-    else {
-        document.write("No network station within reach for point (" + x1[i] + "," + y1[i]+ ") <br/>");
-    }
-
+if (solution_coordinates.length == 0) {
+console.log("No network station within reach for point", x, ",", y);
+} else {
+console.log(
+"Best network station for point",
+x,
+",",
+y,
+"is",
+solution_coordinates[0],
+",",
+solution_coordinates[1],
+"with speed",
+speed.toPrecision(4)
+);
 }
+};
+
+solution(0, 0);
+solution(100, 100);
+solution(15, 10);
+solution(18, 18);
+solution(13, 13);
+solution(25, 99);
