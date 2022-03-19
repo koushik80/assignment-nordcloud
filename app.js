@@ -67,7 +67,7 @@ const solution = (x, y, odd) => {
 solution(0, 0, true);
 solution(100, 100, false);
 solution(15, 10, true);
-solution(18, 18, false);
+solution(18, 18, true);
 solution(13, 13, true);
 solution(25, 99, false);
 
