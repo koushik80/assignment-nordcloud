@@ -25,8 +25,7 @@ const solution = (x, y, odd) => {
   }
   if (solution_coordinates.length == 0) {
     if(!odd) {
-      htmlStr += `<div id="row1"><div> <p>Point</p> </div> <div><p>[${x},${y}]</p></div><div><p>No network station within reach found</p></div><div> </div><div> </div><div> </div></div>`;
-
+      htmlStr += `<div id="row1"><div> <p>Point</p> </div><div><p>[${x},${y}]</p></div><div><p>No network station within reach found</p></div><div> </div><div> </div><div> </div></div>`;
     } else {
       htmlStr += `<div id="row"><div><p>Point</p></div><div><p>[${x},${y}]</p></div><div><p>No network station within reach found</p></div><div> </div><div> </div><div> </div></div>`;
     }
