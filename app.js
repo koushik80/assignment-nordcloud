@@ -10,10 +10,7 @@ const solution = (x, y, odd) => {
   var solution_coordinates = [];
   var speed = 0;
   for (let point of network_stations) {
-    var distance = Math.pow(
-      Math.pow(x - point[0], 2) + Math.pow(y - point[1], 2),
-      0.5
-    );
+    var distance = Math.pow(Math.pow(x - point[0], 2) + Math.pow(y - point[1], 2), 0.5);
     if (distance > point[2]) {
       continue;
     }
@@ -25,17 +22,17 @@ const solution = (x, y, odd) => {
   }
   if (solution_coordinates.length == 0) {
     if(!odd) {
-      htmlStr += `<div id="row1"><div> <p>Point</p> </div><div><p>[${x},${y}]</p></div><div><p>No network station within reach found</p></div><div> </div><div> </div><div> </div></div>`;
+      htmlStr += `<div id="row1"><div><p>Point</p> </div><div><p>[${x},${y}]</p></div><div><p>No network station within reach found</p></div><div> </div><div> </div><div> </div></div>`;
     } else {
       htmlStr += `<div id="row"><div><p>Point</p></div><div><p>[${x},${y}]</p></div><div><p>No network station within reach found</p></div><div> </div><div> </div><div> </div></div>`;
     }
     console.log("No network station within reach for point", x, ",", y);
     } else {
     if(!odd) {
-      htmlStr += `<div id="row1"><div><p>Point</p></div><div><p>[${x},${y}]</p></div><div><p>Best Network at</p></div><div><p>[${solution_coordinates[0]},${solution_coordinates[1]
+      htmlStr += `<div id="row1"><div><p>Point</p></div><div><p>[${x}, ${y}]</p></div><div><p>Best Network at</p></div><div><p>[${solution_coordinates[0]},${solution_coordinates[1]
       }]</p></div><div><p>speed:</p></div><div><p>${speed.toPrecision(4)}</p></div></div>`;
     } else {
-      htmlStr += `<div id="row"><div> <p>Point</p></div><div><p>[${x},${y}]</p></div><div><p>Best Network at</p></div><div><p>[${solution_coordinates[0]},${solution_coordinates[1]
+      htmlStr += `<div id="row"><div><p>Point</p></div><div><p>[${x}, ${y}]</p></div><div><p>Best Network at</p></div><div><p>[${solution_coordinates[0]},${solution_coordinates[1]
       }]</p></div><div><p>speed:</p></div><div><p>${speed.toPrecision(4)}</p></div></div>`;
     }
     console.log("Best network station for point", x, ",", y, "is", solution_coordinates[0], ",", solution_coordinates[1], "with speed", speed.toPrecision(4));
